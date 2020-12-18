@@ -150,6 +150,12 @@ export type BottomTabNavigationOptions = {
    * Defaults to `false`.
    */
   unmountOnBlur?: boolean;
+
+  /**
+   * Render customer content instead of route buttons
+   * @author LiveChat
+   */
+  renderBottomTabContent?: () => React.ReactNode;
 };
 
 export type BottomTabDescriptor = Descriptor<
