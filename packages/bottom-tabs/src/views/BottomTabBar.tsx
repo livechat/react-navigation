@@ -30,7 +30,7 @@ type Props = BottomTabBarProps & {
   inactiveTintColor?: string;
 };
 
-const DEFAULT_TABBAR_HEIGHT = 49;
+const DEFAULT_TABBAR_HEIGHT = 58;
 const COMPACT_TABBAR_HEIGHT = 32;
 const DEFAULT_MAX_TAB_ITEM_WIDTH = 125;
 
@@ -81,8 +81,7 @@ const shouldUseHorizontalLabels = ({
   }
 };
 
-const getPaddingBottom = (insets: EdgeInsets) =>
-  Math.max(insets.bottom - Platform.select({ ios: 4, default: 0 }), 0);
+const getPaddingBottom = (insets: EdgeInsets) => insets.bottom
 
 export const getTabBarHeight = ({
   dimensions,
